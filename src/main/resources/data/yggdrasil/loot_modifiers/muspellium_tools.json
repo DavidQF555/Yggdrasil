@@ -1,0 +1,11 @@
+{
+  "type": "yggdrasil:smelt",
+  "conditions": [
+    {
+      "condition": "match_tool",
+      "predicate": {
+        "tag": "yggdrasil:muspellium_tools"
+      }
+    }
+  ]
+}

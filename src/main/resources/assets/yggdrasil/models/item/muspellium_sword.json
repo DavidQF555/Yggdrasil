@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "yggdrasil:item/muspellium_sword"
+  }
+}
