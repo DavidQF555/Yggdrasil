@@ -13,8 +13,8 @@ public final class ItemRegistry {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Yggdrasil.ID);
 
-    public static final RegistryObject<Item> NIFLIUM = register("niflium", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MUSPELLIUM = register("muspellium", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NIFLIUM = register("niflium", () -> new Item(new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<Item> MUSPELLIUM = register("muspellium", () -> new Item(new Item.Properties().tab(Yggdrasil.GROUP)));
 
     public static final RegistryObject<SwordItem> MUSPELLIUM_SWORD = register("muspellium_sword", () -> new SwordItem(YggdrasilItemTier.MUSPELLIUM, 3, -2.4f, new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<ShovelItem> MUSPELLIUM_SHOVEL = register("muspellium_shovel", () -> new ShovelItem(YggdrasilItemTier.MUSPELLIUM, 1.5f, -3, new Item.Properties().tab(Yggdrasil.GROUP)));
