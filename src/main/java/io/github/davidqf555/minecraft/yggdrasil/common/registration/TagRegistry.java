@@ -8,7 +8,8 @@ import net.minecraft.util.ResourceLocation;
 
 public final class TagRegistry {
 
-    public static final ITag<Item> MUSPELLIUM_TOOLS = ItemTags.bind(new ResourceLocation(Yggdrasil.ID, "muspellium_tools").toString());
+    public static final ITag.INamedTag<Item> MUSPELLIUM_TOOLS = ItemTags.bind(new ResourceLocation(Yggdrasil.ID, "muspellium_tools").toString());
+    public static final ITag.INamedTag<Item> NIFLIUM_TOOLS = ItemTags.bind(new ResourceLocation(Yggdrasil.ID, "niflium_tools").toString());
 
     private TagRegistry() {
     }
