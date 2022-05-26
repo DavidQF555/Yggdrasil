@@ -16,6 +16,9 @@ public final class ItemRegistry {
     public static final RegistryObject<Item> NIFLIUM = register("niflium", () -> new Item(new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<Item> MUSPELLIUM = register("muspellium", () -> new Item(new Item.Properties().tab(Yggdrasil.GROUP)));
 
+    public static final RegistryObject<BlockItem> NIFLIUM_ORE = register("niflium_ore", () -> new BlockItem(BlockRegistry.NIFLIUM_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<BlockItem> MUSPELLIUM_ORE = register("muspellium_ore", () -> new BlockItem(BlockRegistry.MUSPELLIUM_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
+
     public static final RegistryObject<SwordItem> MUSPELLIUM_SWORD = register("muspellium_sword", () -> new SwordItem(YggdrasilItemTier.MUSPELLIUM, 3, -2.4f, new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<ShovelItem> MUSPELLIUM_SHOVEL = register("muspellium_shovel", () -> new ShovelItem(YggdrasilItemTier.MUSPELLIUM, 1.5f, -3, new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<PickaxeItem> MUSPELLIUM_PICKAXE = register("muspellium_pickaxe", () -> new PickaxeItem(YggdrasilItemTier.MUSPELLIUM, 1, -2.8f, new Item.Properties().tab(Yggdrasil.GROUP)));

@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "yggdrasil:niflium_ore"
+  },
+  "result": "yggdrasil:niflium",
+  "experience": 0.7,
+  "cookingtime": 400
+}

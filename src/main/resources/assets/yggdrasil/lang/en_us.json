@@ -11,5 +11,7 @@
   "item.yggdrasil.niflium_hoe": "Niflium Hoe",
   "item.yggdrasil.niflium_pickaxe": "Niflium Pickaxe",
   "item.yggdrasil.niflium_shovel": "Niflium Shovel",
-  "item.yggdrasil.niflium_sword": "Niflium Sword"
+  "item.yggdrasil.niflium_sword": "Niflium Sword",
+  "block.yggdrasil.niflium_ore": "Niflium Ore",
+  "block.yggdrasil.muspellium_ore": "Muspellium Ore"
 }
