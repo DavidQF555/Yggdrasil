@@ -5,7 +5,7 @@ license = "GPLv3"
 modId = "yggdrasil"
 version = "${file.jarVersion}"
 displayName = "Yggdrasil"
-#logoFile="logo.png"
+logoFile = "logo.png"
 authors = "DavidQF555"
 description = 'This mod adds new features'
 [[dependencies.yggdrasil]]
