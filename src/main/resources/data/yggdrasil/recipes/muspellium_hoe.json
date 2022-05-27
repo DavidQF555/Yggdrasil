@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "iron_ingot"
+    },
+    "X": {
+      "item": "yggdrasil:muspellium"
+    }
+  },
+  "result": {
+    "item": "yggdrasil:muspellium_hoe"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "iron_ingot"
+    },
+    "X": {
+      "item": "yggdrasil:niflium"
+    }
+  },
+  "result": {
+    "item": "yggdrasil:niflium_axe"
+  }
+}
