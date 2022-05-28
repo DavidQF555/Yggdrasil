@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "yggdrasil:muspellium"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:muspellium_arrow",
+    "count": 8
+  }
+}

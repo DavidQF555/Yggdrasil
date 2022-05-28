@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "yggdrasil:niflium"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    },
+    {
+      "tag": "arrows"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:niflium_arrow",
+    "count": 8
+  }
+}

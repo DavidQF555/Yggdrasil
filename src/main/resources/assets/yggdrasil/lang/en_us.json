@@ -6,12 +6,16 @@
   "item.yggdrasil.muspellium_pickaxe": "Muspellium Pickaxe",
   "item.yggdrasil.muspellium_shovel": "Muspellium Shovel",
   "item.yggdrasil.muspellium_sword": "Muspellium Sword",
+  "item.yggdrasil.muspellium_arrow": "Muspellium Arrow",
   "item.yggdrasil.niflium": "Niflium",
   "item.yggdrasil.niflium_axe": "Niflium Axe",
   "item.yggdrasil.niflium_hoe": "Niflium Hoe",
   "item.yggdrasil.niflium_pickaxe": "Niflium Pickaxe",
   "item.yggdrasil.niflium_shovel": "Niflium Shovel",
   "item.yggdrasil.niflium_sword": "Niflium Sword",
+  "item.yggdrasil.niflium_arrow": "Niflium Arrow",
   "block.yggdrasil.niflium_ore": "Niflium Ore",
-  "block.yggdrasil.muspellium_ore": "Muspellium Ore"
+  "block.yggdrasil.muspellium_ore": "Muspellium Ore",
+  "entity.yggdrasil.niflium_arrow": "Niflium Arrow",
+  "entity.yggdrasil.muspellium_arrow": "Muspellium Arrow"
 }

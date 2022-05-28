@@ -2,14 +2,12 @@ package io.github.davidqf555.minecraft.yggdrasil.common.events;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.TagRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,15 +27,10 @@ public final class ItemEventSubscriber {
             float damage = event.getAmount();
             LivingEntity target = event.getEntityLiving();
             if (TagRegistry.MUSPELLIUM_TOOLS.contains(hand)) {
-                target.setSecondsOnFire(MathHelper.ceil(damage));
+                EffectHelper.applyFire(target, damage);
             }
             if (TagRegistry.NIFLIUM_TOOLS.contains(hand)) {
-                EffectInstance slow = target.getEffect(Effects.MOVEMENT_SLOWDOWN);
-                int duration = MathHelper.ceil(damage * 20);
-                if (slow != null && slow.getDuration() > duration) {
-                    duration = slow.getDuration();
-                }
-                target.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, duration, slow == null ? 0 : slow.getAmplifier() + 1));
+                EffectHelper.applyFreeze(target, damage);
             }
         }
     }

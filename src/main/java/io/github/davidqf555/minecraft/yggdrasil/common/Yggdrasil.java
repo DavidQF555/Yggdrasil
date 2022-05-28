@@ -1,6 +1,7 @@
 package io.github.davidqf555.minecraft.yggdrasil.common;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.BlockRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.EntityRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.LootModifierRegistry;
 import net.minecraft.item.ItemGroup;
@@ -31,6 +32,7 @@ public class Yggdrasil {
         ItemRegistry.ITEMS.register(bus);
         LootModifierRegistry.SERIALIZERS.register(bus);
         BlockRegistry.BLOCKS.register(bus);
+        EntityRegistry.TYPES.register(bus);
     }
 
 }

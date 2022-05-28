@@ -1,6 +1,9 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.registration;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
+import io.github.davidqf555.minecraft.yggdrasil.common.entities.FireArrowEntity;
+import io.github.davidqf555.minecraft.yggdrasil.common.entities.IceArrowEntity;
+import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
@@ -29,6 +32,9 @@ public final class ItemRegistry {
     public static final RegistryObject<PickaxeItem> NIFLIUM_PICKAXE = register("niflium_pickaxe", () -> new PickaxeItem(YggdrasilItemTier.NIFLIUM, 1, -2.8f, new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<AxeItem> NIFLIUM_AXE = register("niflium_axe", () -> new AxeItem(YggdrasilItemTier.NIFLIUM, 5, -3, new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<HoeItem> NIFLIUM_HOE = register("niflium_hoe", () -> new HoeItem(YggdrasilItemTier.NIFLIUM, -3, 0, new Item.Properties().tab(Yggdrasil.GROUP)));
+
+    public static final RegistryObject<CustomArrowItem> NIFLIUM_ARROW = register("niflium_arrow", () -> new CustomArrowItem((world, entity) -> new IceArrowEntity(EntityRegistry.NIFLIUM_ARROW.get(), entity, world), new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<CustomArrowItem> MUSPELLIUM_ARROW = register("muspellium_arrow", () -> new CustomArrowItem((world, entity) -> new FireArrowEntity(EntityRegistry.MUSPELLIUM_ARROW.get(), entity, world), new Item.Properties().tab(Yggdrasil.GROUP)));
 
     private ItemRegistry() {
     }
