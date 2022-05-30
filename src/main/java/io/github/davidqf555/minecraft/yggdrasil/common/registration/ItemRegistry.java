@@ -5,10 +5,10 @@ import io.github.davidqf555.minecraft.yggdrasil.common.entities.FireArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.IceArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
-import net.minecraft.item.*;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 

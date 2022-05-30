@@ -1,31 +1,31 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.entities;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.network.IPacket;
-import net.minecraft.particles.IParticleData;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants;
-import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 
-public class CustomArrowEntity extends AbstractArrowEntity {
+public class CustomArrowEntity extends AbstractArrow {
 
-    private final IParticleData particle;
+    private final ParticleOptions particle;
     private ItemStack pickup;
 
-    public CustomArrowEntity(EntityType<? extends AbstractArrowEntity> type, World world, ItemStack pickup, @Nullable IParticleData particle) {
+    public CustomArrowEntity(EntityType<? extends AbstractArrow> type, Level world, ItemStack pickup, @Nullable ParticleOptions particle) {
         super(type, world);
         this.pickup = pickup;
         this.particle = particle;
     }
 
-    public CustomArrowEntity(EntityType<? extends AbstractArrowEntity> type, LivingEntity owner, World world, @Nullable IParticleData particle) {
+    public CustomArrowEntity(EntityType<? extends AbstractArrow> type, LivingEntity owner, Level world, @Nullable ParticleOptions particle) {
         super(type, owner, world);
         pickup = ItemStack.EMPTY;
         this.particle = particle;
@@ -39,7 +39,7 @@ public class CustomArrowEntity extends AbstractArrowEntity {
                 level.addParticle(particle, getRandomX(0.5), getRandomY(), getRandomZ(0.5), 0, 0, 0);
             }
             if (!inGround) {
-                Vector3d vel = getDeltaMovement();
+                Vec3 vel = getDeltaMovement();
                 for (int i = 0; i < 4; ++i) {
                     level.addParticle(particle, getX() + vel.x() * i / 4, getY() + vel.y() * i / 4, getZ() + vel.z() * i / 4, -vel.x(), -vel.y(), -vel.z());
                 }
@@ -51,16 +51,17 @@ public class CustomArrowEntity extends AbstractArrowEntity {
         this.pickup = pickup;
     }
 
+
     @Override
-    public void readAdditionalSaveData(CompoundNBT nbt) {
+    public void readAdditionalSaveData(CompoundTag nbt) {
         super.readAdditionalSaveData(nbt);
-        if (nbt.contains("Pickup Item", Constants.NBT.TAG_COMPOUND)) {
+        if (nbt.contains("Pickup Item", Tag.TAG_COMPOUND)) {
             pickup = ItemStack.of(nbt.getCompound("Pickup Item"));
         }
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundNBT nbt) {
+    public void addAdditionalSaveData(CompoundTag nbt) {
         super.addAdditionalSaveData(nbt);
         nbt.put("Pickup Item", pickup.serializeNBT());
     }
@@ -71,7 +72,7 @@ public class CustomArrowEntity extends AbstractArrowEntity {
     }
 
     @Override
-    public IPacket<?> getAddEntityPacket() {
+    public Packet<?> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 }

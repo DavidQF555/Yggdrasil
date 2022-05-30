@@ -3,11 +3,11 @@ package io.github.davidqf555.minecraft.yggdrasil.common.events;
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.TagRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.Item;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Hand;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,13 +23,13 @@ public final class ItemEventSubscriber {
         DamageSource source = event.getSource();
         Entity entity = source.getEntity();
         if (entity instanceof LivingEntity && !source.isProjectile() && !source.getMsgId().equals("thrown") && !source.isMagic() && !source.isExplosion() && !source.isFire() && entity.equals(source.getDirectEntity())) {
-            Item hand = ((LivingEntity) entity).getItemInHand(Hand.MAIN_HAND).getItem();
+            ItemStack hand = ((LivingEntity) entity).getItemInHand(InteractionHand.MAIN_HAND);
             float damage = event.getAmount();
             LivingEntity target = event.getEntityLiving();
-            if (TagRegistry.MUSPELLIUM_TOOLS.contains(hand)) {
+            if (hand.is(TagRegistry.MUSPELLIUM_TOOLS)) {
                 EffectHelper.applyFire(target, damage);
             }
-            if (TagRegistry.NIFLIUM_TOOLS.contains(hand)) {
+            if (hand.is(TagRegistry.NIFLIUM_TOOLS)) {
                 EffectHelper.applyFreeze(target, damage);
             }
         }

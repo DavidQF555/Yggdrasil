@@ -1,10 +1,10 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.items;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
-public enum YggdrasilItemTier implements IItemTier {
+public enum YggdrasilItemTier implements Tier {
 
     NIFLIUM(1561, 8, 3, 3, 10, Ingredient.of(ItemRegistry.NIFLIUM.get())),
     MUSPELLIUM(1561, 8, 3, 3, 10, Ingredient.of(ItemRegistry.MUSPELLIUM.get()));

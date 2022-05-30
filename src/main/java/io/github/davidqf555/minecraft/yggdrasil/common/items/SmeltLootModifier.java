@@ -1,15 +1,15 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.items;
 
 import com.google.gson.JsonObject;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipe;
-import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.item.crafting.RecipeManager;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.loot.LootModifier;
 
@@ -20,18 +20,18 @@ import java.util.stream.Collectors;
 
 public class SmeltLootModifier extends LootModifier {
 
-    protected SmeltLootModifier(ILootCondition[] conditions) {
+    protected SmeltLootModifier(LootItemCondition[] conditions) {
         super(conditions);
     }
 
     @Nonnull
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
-        ServerWorld world = context.getLevel();
+        ServerLevel world = context.getLevel();
         RecipeManager manager = world.getRecipeManager();
         return generatedLoot.stream().map(stack -> {
-            Inventory inv = new Inventory(stack);
-            Optional<FurnaceRecipe> recipe = manager.getRecipeFor(IRecipeType.SMELTING, inv, world);
+            SimpleContainer inv = new SimpleContainer(stack);
+            Optional<SmeltingRecipe> recipe = manager.getRecipeFor(RecipeType.SMELTING, inv, world);
             return recipe.map(furnaceRecipe -> furnaceRecipe.assemble(inv)).orElse(stack);
         }).collect(Collectors.toList());
     }
@@ -39,7 +39,7 @@ public class SmeltLootModifier extends LootModifier {
     public static class Serializer extends GlobalLootModifierSerializer<SmeltLootModifier> {
 
         @Override
-        public SmeltLootModifier read(ResourceLocation location, JsonObject object, ILootCondition[] conditions) {
+        public SmeltLootModifier read(ResourceLocation location, JsonObject object, LootItemCondition[] conditions) {
             return new SmeltLootModifier(conditions);
         }
 

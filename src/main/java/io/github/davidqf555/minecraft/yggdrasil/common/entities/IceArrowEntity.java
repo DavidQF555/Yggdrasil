@@ -1,40 +1,40 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.entities;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SnowBlock;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.particles.BlockParticleData;
-import net.minecraft.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.World;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SnowLayerBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.function.Consumer;
 
 public class IceArrowEntity extends CustomArrowEntity {
 
     private static final int SNOW_RADIUS = 5, ICE_RADIUS = 3;
-    private static final BlockParticleData PARTICLE = new BlockParticleData(ParticleTypes.BLOCK, Blocks.PACKED_ICE.defaultBlockState());
+    private static final BlockParticleOption PARTICLE = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.PACKED_ICE.defaultBlockState());
 
-    public IceArrowEntity(EntityType<? extends AbstractArrowEntity> type, World world, ItemStack pickup) {
+    public IceArrowEntity(EntityType<? extends AbstractArrow> type, Level world, ItemStack pickup) {
         super(type, world, pickup, PARTICLE);
     }
 
-    public IceArrowEntity(EntityType<? extends AbstractArrowEntity> type, LivingEntity owner, World world) {
+    public IceArrowEntity(EntityType<? extends AbstractArrow> type, LivingEntity owner, Level world) {
         super(type, owner, world, PARTICLE);
     }
 
     @Override
     protected void doPostHurtEffects(LivingEntity target) {
         super.doPostHurtEffects(target);
-        double damage = MathHelper.ceil(MathHelper.clamp(getDeltaMovement().length() * getBaseDamage(), 0, 2.147483647E9));
+        double damage = Mth.ceil(Mth.clamp(getDeltaMovement().length() * getBaseDamage(), 0, 2.147483647E9));
         EffectHelper.applyFreeze(target, (float) damage);
     }
 
@@ -51,7 +51,7 @@ public class IceArrowEntity extends CustomArrowEntity {
     }
 
     @Override
-    protected void onHitBlock(BlockRayTraceResult result) {
+    protected void onHitBlock(BlockHitResult result) {
         super.onHitBlock(result);
         BlockPos center = result.getBlockPos();
         if (!result.isInside()) {
@@ -65,7 +65,7 @@ public class IceArrowEntity extends CustomArrowEntity {
                     level.setBlockAndUpdate(pos, snow);
                 }
             } else if (state.is(Blocks.SNOW)) {
-                BlockState snow = state.setValue(SnowBlock.LAYERS, Math.min(state.getValue(SnowBlock.LAYERS) + 1, 8));
+                BlockState snow = state.setValue(SnowLayerBlock.LAYERS, Math.min(state.getValue(SnowLayerBlock.LAYERS) + 1, 8));
                 if (snow.canSurvive(level, pos)) {
                     level.setBlockAndUpdate(pos, snow);
                 }
