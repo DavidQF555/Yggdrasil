@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "yggdrasil:muspellium_block"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:muspellium",
+    "count": 9
+  }
+}

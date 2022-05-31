@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "yggdrasil:niflium_block"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:niflium",
+    "count": 9
+  }
+}

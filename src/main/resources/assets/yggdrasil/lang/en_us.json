@@ -23,7 +23,9 @@
   "item.yggdrasil.niflium_leggings": "Niflium Leggings",
   "item.yggdrasil.niflium_boots": "Niflium Boots",
   "block.yggdrasil.niflium_ore": "Niflium Ore",
+  "block.yggdrasil.niflium_block": "Niflium Block",
   "block.yggdrasil.muspellium_ore": "Muspellium Ore",
+  "block.yggdrasil.muspellium_block": "Muspellium Block",
   "entity.yggdrasil.niflium_arrow": "Niflium Arrow",
   "entity.yggdrasil.muspellium_arrow": "Muspellium Arrow"
 }

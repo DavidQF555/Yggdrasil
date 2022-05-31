@@ -1,5 +1,6 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.util;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -19,7 +20,7 @@ public final class EffectHelper {
         target.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, duration, slow == null ? 0 : slow.getAmplifier() + 1));
     }
 
-    public static void applyFire(LivingEntity target, float damage) {
+    public static void applyFire(Entity target, float damage) {
         target.setSecondsOnFire(MathHelper.ceil(damage));
     }
 }
