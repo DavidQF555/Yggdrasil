@@ -32,6 +32,7 @@ public class Yggdrasil {
         EntityRegistry.TYPES.register(bus);
         FeatureRegistry.CONFIGURED.register(bus);
         FeatureRegistry.PLACED.register(bus);
+        TileEntityRegistry.TYPES.register(bus);
     }
 
 }

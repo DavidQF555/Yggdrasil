@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "yggdrasil:muspellium"
+    }
+  },
+  "result": {
+    "item": "yggdrasil:muspellium_helmet"
+  }
+}
