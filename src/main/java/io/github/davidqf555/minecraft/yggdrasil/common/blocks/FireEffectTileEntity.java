@@ -2,26 +2,27 @@ package io.github.davidqf555.minecraft.yggdrasil.common.blocks;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.TileEntityRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 
 public class FireEffectTileEntity extends EffectTileEntity {
 
-    public FireEffectTileEntity() {
-        this(TileEntityRegistry.FIRE_EFFECT.get());
+    public FireEffectTileEntity(BlockPos pos, BlockState state) {
+        this(TileEntityRegistry.FIRE_EFFECT.get(), pos, state);
     }
 
-    protected FireEffectTileEntity(TileEntityType<?> type) {
-        super(type);
+    protected FireEffectTileEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     @Override
@@ -40,9 +41,9 @@ public class FireEffectTileEntity extends EffectTileEntity {
     }
 
     @Override
-    protected void applyBlockEffect(World world, BlockPos pos) {
+    protected void applyBlockEffect(Level world, BlockPos pos) {
         if (level.isEmptyBlock(pos)) {
-            level.setBlockAndUpdate(pos, Blocks.FIRE.getStateForPlacement(new BlockItemUseContext(level, null, Hand.MAIN_HAND, ItemStack.EMPTY, BlockRayTraceResult.miss(Vector3d.atCenterOf(pos), Direction.NORTH, pos))));
+            level.setBlockAndUpdate(pos, Blocks.FIRE.getStateForPlacement(new BlockPlaceContext(level, null, InteractionHand.MAIN_HAND, ItemStack.EMPTY, BlockHitResult.miss(Vec3.atCenterOf(pos), Direction.NORTH, pos))));
         }
     }
 }

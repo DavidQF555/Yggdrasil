@@ -2,24 +2,24 @@ package io.github.davidqf555.minecraft.yggdrasil.common.blocks;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.TileEntityRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SnowBlock;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SnowLayerBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class IceEffectTileEntity extends EffectTileEntity {
 
-    public IceEffectTileEntity() {
-        this(TileEntityRegistry.ICE_EFFECT.get());
+    public IceEffectTileEntity(BlockPos pos, BlockState state) {
+        this(TileEntityRegistry.ICE_EFFECT.get(), pos, state);
     }
 
-    protected IceEffectTileEntity(TileEntityType<?> type) {
-        super(type);
+    protected IceEffectTileEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class IceEffectTileEntity extends EffectTileEntity {
     }
 
     @Override
-    protected void applyBlockEffect(World world, BlockPos pos) {
+    protected void applyBlockEffect(Level world, BlockPos pos) {
         BlockState state = level.getBlockState(pos);
         if (state.getFluidState().is(FluidTags.WATER)) {
             level.setBlockAndUpdate(pos, Blocks.ICE.defaultBlockState());
@@ -50,7 +50,7 @@ public class IceEffectTileEntity extends EffectTileEntity {
                 level.setBlockAndUpdate(pos, snow);
             }
         } else if (state.is(Blocks.SNOW)) {
-            BlockState snow = state.setValue(SnowBlock.LAYERS, Math.min(state.getValue(SnowBlock.LAYERS) + 1, 8));
+            BlockState snow = state.setValue(SnowLayerBlock.LAYERS, Math.min(state.getValue(SnowLayerBlock.LAYERS) + 1, 8));
             if (snow.canSurvive(level, pos)) {
                 level.setBlockAndUpdate(pos, snow);
             }

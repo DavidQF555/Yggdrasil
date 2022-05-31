@@ -2,14 +2,14 @@ package io.github.davidqf555.minecraft.yggdrasil.common.items;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.crafting.Ingredient;
 
-public enum YggdrasilArmorMaterial implements IArmorMaterial {
+public enum YggdrasilArmorMaterial implements ArmorMaterial {
 
     NIFLIUM(33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2, 0, Ingredient.of(ItemRegistry.NIFLIUM.get())),
     MUSPELLIUM(33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2, 0, Ingredient.of(ItemRegistry.MUSPELLIUM.get()));
@@ -35,12 +35,12 @@ public enum YggdrasilArmorMaterial implements IArmorMaterial {
     }
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlotType type) {
+    public int getDurabilityForSlot(EquipmentSlot type) {
         return DURABILITY_PER_SLOT[type.getIndex()] * durability;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlotType type) {
+    public int getDefenseForSlot(EquipmentSlot type) {
         return defense[type.getIndex()];
     }
 
