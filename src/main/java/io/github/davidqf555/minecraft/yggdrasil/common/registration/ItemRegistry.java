@@ -4,7 +4,9 @@ import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.FireArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.IceArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
+import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilArmorMaterial;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,6 +37,15 @@ public final class ItemRegistry {
 
     public static final RegistryObject<CustomArrowItem> NIFLIUM_ARROW = register("niflium_arrow", () -> new CustomArrowItem((world, entity) -> new IceArrowEntity(EntityRegistry.NIFLIUM_ARROW.get(), entity, world), new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<CustomArrowItem> MUSPELLIUM_ARROW = register("muspellium_arrow", () -> new CustomArrowItem((world, entity) -> new FireArrowEntity(EntityRegistry.MUSPELLIUM_ARROW.get(), entity, world), new Item.Properties().tab(Yggdrasil.GROUP)));
+
+    public static final RegistryObject<ArmorItem> NIFLIUM_HELMET = register("niflium_helmet", () -> new ArmorItem(YggdrasilArmorMaterial.NIFLIUM, EquipmentSlotType.HEAD, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> NIFLIUM_CHESTPLATE = register("niflium_chestplate", () -> new ArmorItem(YggdrasilArmorMaterial.NIFLIUM, EquipmentSlotType.CHEST, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> NIFLIUM_LEGGINGS = register("niflium_leggings", () -> new ArmorItem(YggdrasilArmorMaterial.NIFLIUM, EquipmentSlotType.LEGS, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> NIFLIUM_BOOTS = register("niflium_boots", () -> new ArmorItem(YggdrasilArmorMaterial.NIFLIUM, EquipmentSlotType.FEET, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> MUSPELLIUM_HELMET = register("muspellium_helmet", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.HEAD, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> MUSPELLIUM_CHESTPLATE = register("muspellium_chestplate", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.CHEST, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> MUSPELLIUM_LEGGINGS = register("muspellium_leggings", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.LEGS, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ArmorItem> MUSPELLIUM_BOOTS = register("muspellium_boots", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.FEET, new Item.Properties().tab(Yggdrasil.GROUP)));
 
     private ItemRegistry() {
     }

@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "yggdrasil:niflium"
+    }
+  },
+  "result": {
+    "item": "yggdrasil:niflium_helmet"
+  }
+}
