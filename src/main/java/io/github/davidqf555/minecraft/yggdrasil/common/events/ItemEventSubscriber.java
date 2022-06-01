@@ -1,6 +1,7 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.events;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.TagRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
 import net.minecraft.entity.Entity;
@@ -9,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,6 +34,13 @@ public final class ItemEventSubscriber {
             if (TagRegistry.NIFLIUM_TOOLS.contains(hand)) {
                 EffectHelper.applyFreeze(target, damage);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onFurnaceFuelBurnTime(FurnaceFuelBurnTimeEvent event) {
+        if (event.getItemStack().getItem().equals(ItemRegistry.MUSPELLIUM.get())) {
+            event.setBurnTime(100000);
         }
     }
 }
