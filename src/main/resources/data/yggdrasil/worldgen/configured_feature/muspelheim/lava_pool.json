@@ -1,0 +1,51 @@
+{
+  "type": "decorated",
+  "config": {
+    "decorator": {
+      "type": "count",
+      "config": {
+        "count": 128
+      }
+    },
+    "feature": {
+      "type": "decorated",
+      "config": {
+        "decorator": {
+          "type": "square",
+          "config": {}
+        },
+        "feature": {
+          "type": "decorated",
+          "config": {
+            "decorator": {
+              "type": "range",
+              "config": {
+                "bottom_offset": 20,
+                "top_offset": 40,
+                "maximum": 256
+              }
+            },
+            "feature": {
+              "type": "spring_feature",
+              "config": {
+                "requires_block_below": false,
+                "state": {
+                  "Name": "lava",
+                  "Properties": {
+                    "falling": "false",
+                    "level": "8"
+                  }
+                },
+                "valid_blocks": [
+                  "blackstone",
+                  "basalt",
+                  "magma_block"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

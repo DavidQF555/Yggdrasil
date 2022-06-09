@@ -1,0 +1,9 @@
+{
+  "type": "blasting",
+  "ingredient": {
+    "item": "yggdrasil:blackstone_coal_ore"
+  },
+  "result": "coal",
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -1,0 +1,16 @@
+{
+  "fixed_time": 12000,
+  "has_skylight": true,
+  "has_ceiling": false,
+  "ultrawarm": true,
+  "natural": true,
+  "coordinate_scale": 1,
+  "piglin_safe": false,
+  "bed_works": true,
+  "respawn_anchor_works": true,
+  "has_raids": false,
+  "logical_height": 128,
+  "infiniburn": "yggdrasil:infiniburn_muspelheim",
+  "effects": "overworld",
+  "ambient_light": 0.5
+}

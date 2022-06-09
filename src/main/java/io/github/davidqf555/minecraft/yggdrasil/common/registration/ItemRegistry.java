@@ -4,10 +4,13 @@ import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.FireArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.IceArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
+import io.github.davidqf555.minecraft.yggdrasil.common.items.WorldPointerItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilArmorMaterial;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.DimensionRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -49,6 +52,13 @@ public final class ItemRegistry {
     public static final RegistryObject<ArmorItem> MUSPELLIUM_CHESTPLATE = register("muspellium_chestplate", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.CHEST, new Item.Properties().tab(Yggdrasil.GROUP).fireResistant()));
     public static final RegistryObject<ArmorItem> MUSPELLIUM_LEGGINGS = register("muspellium_leggings", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.LEGS, new Item.Properties().tab(Yggdrasil.GROUP).fireResistant()));
     public static final RegistryObject<ArmorItem> MUSPELLIUM_BOOTS = register("muspellium_boots", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.FEET, new Item.Properties().tab(Yggdrasil.GROUP).fireResistant()));
+
+    public static final RegistryObject<WorldPointerItem> MUSPELHEIM_RUNE = register("muspelheim_rune", () -> new WorldPointerItem(DimensionRegistry.MUSPELHEIM, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<WorldPointerItem> OVERWORLD_RUNE = register("overworld_rune", () -> new WorldPointerItem(World.OVERWORLD, new Item.Properties().tab(Yggdrasil.GROUP)));
+
+    public static final RegistryObject<BlockItem> BLACKSTONE_MUSPELLIUM_ORE = register("blackstone_muspellium_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_MUSPELLIUM_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<BlockItem> BLACKSTONE_COAL_ORE = register("blackstone_coal_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_COAL_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<BlockItem> BLACKSTONE_IRON_ORE = register("blackstone_iron_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_IRON_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
 
     private ItemRegistry() {
     }

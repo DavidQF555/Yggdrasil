@@ -1,6 +1,8 @@
 package io.github.davidqf555.minecraft.yggdrasil.common;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.*;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.CarverRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.SurfaceBuilderRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -31,6 +33,9 @@ public class Yggdrasil {
         BlockRegistry.BLOCKS.register(bus);
         EntityRegistry.TYPES.register(bus);
         TileEntityRegistry.TYPES.register(bus);
+        POIRegistry.TYPES.register(bus);
+        SurfaceBuilderRegistry.BUILDERS.register(bus);
+        CarverRegistry.CARVERS.register(bus);
     }
 
 }

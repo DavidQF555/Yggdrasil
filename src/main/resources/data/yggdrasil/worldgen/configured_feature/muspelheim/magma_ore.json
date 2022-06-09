@@ -1,0 +1,34 @@
+{
+  "type": "decorated",
+  "config": {
+    "decorator": {
+      "type": "count",
+      "config": {
+        "count": 10
+      }
+    },
+    "feature": {
+      "type": "decorated",
+      "config": {
+        "decorator": {
+          "type": "square",
+          "config": {}
+        },
+        "feature": {
+          "type": "ore",
+          "config": {
+            "target": {
+              "predicate_type": "block_match",
+              "block": "blackstone"
+            },
+            "state": {
+              "Name": "magma_block",
+              "Properties": {}
+            },
+            "size": 33
+          }
+        }
+      }
+    }
+  }
+}

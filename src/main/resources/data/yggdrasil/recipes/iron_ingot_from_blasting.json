@@ -1,0 +1,9 @@
+{
+  "type": "blasting",
+  "ingredient": {
+    "item": "yggdrasil:blackstone_iron_ore"
+  },
+  "result": "iron_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

@@ -1,0 +1,18 @@
+{
+  "type": "yggdrasil:muspelheim",
+  "config": {
+    "top_material": {
+      "Name": "blackstone",
+      "Properties": {
+      }
+    },
+    "under_material": {
+      "Name": "blackstone",
+      "Properties": {}
+    },
+    "underwater_material": {
+      "Name": "blackstone",
+      "Properties": {}
+    }
+  }
+}
