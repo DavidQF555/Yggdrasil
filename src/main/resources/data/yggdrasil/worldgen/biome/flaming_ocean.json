@@ -3,7 +3,6 @@
   "category": "ocean",
   "temperature": 5,
   "downfall": 0,
-  "creature_spawn_probability": 0.5,
   "depth": -1,
   "scale": 0.1,
   "effects": {
@@ -14,6 +13,9 @@
   },
   "surface_builder": "yggdrasil:muspelheim",
   "carvers": {
+    "air": [
+      "yggdrasil:muspelheim_cave"
+    ]
   },
   "features": [
     [],
@@ -37,6 +39,14 @@
   ],
   "starts": [],
   "spawners": {
+    "monster": [
+      {
+        "type": "yggdrasil:torched",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ]
   },
   "spawn_costs": {
   }

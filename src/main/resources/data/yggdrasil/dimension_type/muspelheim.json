@@ -11,6 +11,5 @@
   "has_raids": false,
   "logical_height": 128,
   "infiniburn": "yggdrasil:infiniburn_muspelheim",
-  "effects": "overworld",
   "ambient_light": 0.5
 }

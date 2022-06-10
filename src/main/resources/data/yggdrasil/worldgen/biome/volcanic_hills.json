@@ -3,7 +3,6 @@
   "category": "extreme_hills",
   "temperature": 3,
   "downfall": 0,
-  "creature_spawn_probability": 0.5,
   "depth": 1,
   "scale": 0.5,
   "effects": {
@@ -40,6 +39,14 @@
   ],
   "starts": [],
   "spawners": {
+    "monster": [
+      {
+        "type": "yggdrasil:torched",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ]
   },
   "spawn_costs": {
   }

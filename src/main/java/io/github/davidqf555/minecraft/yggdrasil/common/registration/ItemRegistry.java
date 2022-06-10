@@ -11,6 +11,7 @@ import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.Dim
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -59,6 +60,8 @@ public final class ItemRegistry {
     public static final RegistryObject<BlockItem> BLACKSTONE_MUSPELLIUM_ORE = register("blackstone_muspellium_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_MUSPELLIUM_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<BlockItem> BLACKSTONE_COAL_ORE = register("blackstone_coal_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_COAL_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<BlockItem> BLACKSTONE_IRON_ORE = register("blackstone_iron_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_IRON_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> TORCHED_SPAWN_EGG = register("torched_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.TORCHED, 0x101010, 0xD14F0C, new Item.Properties().tab(Yggdrasil.GROUP)));
 
     private ItemRegistry() {
     }

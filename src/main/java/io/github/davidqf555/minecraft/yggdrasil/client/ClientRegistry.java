@@ -1,6 +1,7 @@
 package io.github.davidqf555.minecraft.yggdrasil.client;
 
 import io.github.davidqf555.minecraft.yggdrasil.client.render.CustomArrowRenderer;
+import io.github.davidqf555.minecraft.yggdrasil.client.render.TorchedRenderer;
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.EntityRegistry;
 import net.minecraft.util.ResourceLocation;
@@ -23,5 +24,6 @@ public final class ClientRegistry {
     public static void onFMLClientSetup(FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.NIFLIUM_ARROW.get(), manager -> new CustomArrowRenderer<>(manager, NIFLIUM_ARROW_TEXTURE));
         RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.MUSPELLIUM_ARROW.get(), manager -> new CustomArrowRenderer<>(manager, MUSPELLIUM_ARROW_TEXTURE));
+        RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.TORCHED.get(), TorchedRenderer::new);
     }
 }

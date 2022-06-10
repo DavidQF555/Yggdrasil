@@ -24,6 +24,7 @@
   "item.yggdrasil.niflium_boots": "Niflium Boots",
   "item.yggdrasil.overworld_rune": "Overworld Rune",
   "item.yggdrasil.muspelheim_rune": "Muspelheim Rune",
+  "item.yggdrasil.torched_spawn_egg": "Torched Spawn Egg",
   "block.yggdrasil.niflium_ore": "Niflium Ore",
   "block.yggdrasil.niflium_block": "Niflium Block",
   "block.yggdrasil.muspellium_ore": "Muspellium Ore",
@@ -33,5 +34,6 @@
   "block.yggdrasil.blackstone_muspellium_ore": "Blackstone Muspellium Ore",
   "block.yggdrasil.runic_teleporter": "Runic Teleporter",
   "entity.yggdrasil.niflium_arrow": "Niflium Arrow",
-  "entity.yggdrasil.muspellium_arrow": "Muspellium Arrow"
+  "entity.yggdrasil.muspellium_arrow": "Muspellium Arrow",
+  "entity.yggdrasil.torched": "Torched"
 }
