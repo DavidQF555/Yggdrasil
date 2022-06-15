@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_hot_overworld",
+  "features": "yggdrasil:muspellium_ore",
+  "step": "underground_ores"
+}

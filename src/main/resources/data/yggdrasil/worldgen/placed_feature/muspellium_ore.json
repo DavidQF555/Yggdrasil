@@ -1,0 +1,27 @@
+{
+  "feature": "yggdrasil:muspellium_ore",
+  "placement": [
+    {
+      "type": "count",
+      "count": 7
+    },
+    {
+      "type": "in_square"
+    },
+    {
+      "type": "height_range",
+      "height": {
+        "type": "trapezoid",
+        "min_inclusive": {
+          "above_bottom": -80
+        },
+        "max_inclusive": {
+          "above_bottom": 80
+        }
+      }
+    },
+    {
+      "type": "biome"
+    }
+  ]
+}

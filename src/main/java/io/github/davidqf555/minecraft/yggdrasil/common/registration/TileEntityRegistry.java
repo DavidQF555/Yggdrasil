@@ -20,8 +20,9 @@ public final class TileEntityRegistry {
 
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(String name, Supplier<BlockEntityType<T>> type) {
         return TYPES.register(name, type);
-    }    public static final RegistryObject<BlockEntityType<IceEffectTileEntity>> ICE_EFFECT = register("ice_effect", () -> BlockEntityType.Builder.of(IceEffectTileEntity::new, BlockRegistry.NIFLIUM_BLOCK.get()).build(null));
+    }
 
+    public static final RegistryObject<BlockEntityType<IceEffectTileEntity>> ICE_EFFECT = register("ice_effect", () -> BlockEntityType.Builder.of(IceEffectTileEntity::new, BlockRegistry.NIFLIUM_BLOCK.get()).build(null));
 
 
     public static final RegistryObject<BlockEntityType<FireEffectTileEntity>> FIRE_EFFECT = register("fire_effect", () -> BlockEntityType.Builder.of(FireEffectTileEntity::new, BlockRegistry.MUSPELLIUM_BLOCK.get()).build(null));

@@ -1,0 +1,19 @@
+{
+  "type": "ore",
+  "config": {
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "tag_match",
+          "tag": "stone_ore_replaceables"
+        },
+        "state": {
+          "Name": "yggdrasil:muspellium_ore",
+          "Properties": {}
+        }
+      }
+    ],
+    "size": 4,
+    "discard_chance_on_air_exposure": 0.5
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_cold_overworld",
+  "features": "yggdrasil:niflium_ore",
+  "step": "underground_ores"
+}

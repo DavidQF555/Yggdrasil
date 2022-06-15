@@ -6,14 +6,21 @@ import io.github.davidqf555.minecraft.yggdrasil.common.entities.IceArrowEntity;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilArmorMaterial;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
 import java.util.function.Supplier;
 
+@Mod.EventBusSubscriber(modid = Yggdrasil.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ItemRegistry {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Yggdrasil.ID);
@@ -55,5 +62,13 @@ public final class ItemRegistry {
 
     private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item) {
         return ITEMS.register(name, item);
+    }
+
+    @SubscribeEvent
+    public static void onFMLCommonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            TierSortingRegistry.registerTier(YggdrasilItemTier.NIFLIUM, new ResourceLocation(Yggdrasil.ID, "niflium"), List.of(Tiers.WOOD, Tiers.STONE, Tiers.IRON, Tiers.GOLD, Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+            TierSortingRegistry.registerTier(YggdrasilItemTier.MUSPELLIUM, new ResourceLocation(Yggdrasil.ID, "muspellium"), List.of(Tiers.WOOD, Tiers.STONE, Tiers.IRON, Tiers.GOLD, Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+        });
     }
 }

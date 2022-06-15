@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[40,)"
+loaderVersion = "[41,)"
 license = "GPLv3"
 [[mods]]
 modId = "yggdrasil"
@@ -11,12 +11,12 @@ description = 'This mod adds new features'
 [[dependencies.yggdrasil]]
 modId = "forge"
 mandatory = true
-versionRange = "[40,)"
+versionRange = "[41,)"
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.yggdrasil]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.2,1.19)"
+versionRange = "[1.19,1.20)"
 ordering = "NONE"
 side = "BOTH"
