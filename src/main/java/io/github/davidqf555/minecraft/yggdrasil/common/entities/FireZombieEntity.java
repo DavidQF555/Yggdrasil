@@ -33,7 +33,7 @@ public class FireZombieEntity extends ZombieEntity {
     }
 
     public static boolean canSpawn(EntityType<FireZombieEntity> type, IServerWorld world, SpawnReason reason, BlockPos pos, Random rand) {
-        return world.getDifficulty() != Difficulty.PEACEFUL && checkMobSpawnRules(type, world, reason, pos, rand);
+        return world.getDifficulty() != Difficulty.PEACEFUL && !world.canSeeSky(pos) && checkMobSpawnRules(type, world, reason, pos, rand);
     }
 
     @Override

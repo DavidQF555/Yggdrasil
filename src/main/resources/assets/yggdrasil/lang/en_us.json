@@ -35,5 +35,6 @@
   "block.yggdrasil.runic_teleporter": "Runic Teleporter",
   "entity.yggdrasil.niflium_arrow": "Niflium Arrow",
   "entity.yggdrasil.muspellium_arrow": "Muspellium Arrow",
-  "entity.yggdrasil.torched": "Torched"
+  "entity.yggdrasil.torched": "Torched",
+  "entity.yggdrasil.fire_giant": "Fire Giant"
 }

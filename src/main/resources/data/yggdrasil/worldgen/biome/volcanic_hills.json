@@ -46,6 +46,14 @@
         "minCount": 4,
         "maxCount": 4
       }
+    ],
+    "creature": [
+      {
+        "type": "yggdrasil:fire_giant",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      }
     ]
   },
   "spawn_costs": {
