@@ -54,14 +54,17 @@ public final class ItemRegistry {
     public static final RegistryObject<ArmorItem> MUSPELLIUM_LEGGINGS = register("muspellium_leggings", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.LEGS, new Item.Properties().tab(Yggdrasil.GROUP).fireResistant()));
     public static final RegistryObject<ArmorItem> MUSPELLIUM_BOOTS = register("muspellium_boots", () -> new ArmorItem(YggdrasilArmorMaterial.MUSPELLIUM, EquipmentSlotType.FEET, new Item.Properties().tab(Yggdrasil.GROUP).fireResistant()));
 
-    public static final RegistryObject<WorldPointerItem> MUSPELHEIM_RUNE = register("muspelheim_rune", () -> new WorldPointerItem(DimensionRegistry.MUSPELHEIM, new Item.Properties().tab(Yggdrasil.GROUP)));
-    public static final RegistryObject<WorldPointerItem> OVERWORLD_RUNE = register("overworld_rune", () -> new WorldPointerItem(World.OVERWORLD, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<WorldPointerItem> KENAZ_RUNE = register("kenaz_rune", () -> new WorldPointerItem(DimensionRegistry.MUSPELHEIM, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<WorldPointerItem> MANNAZ_RUNE = register("mannaz_rune", () -> new WorldPointerItem(World.OVERWORLD, new Item.Properties().tab(Yggdrasil.GROUP)));
 
     public static final RegistryObject<BlockItem> BLACKSTONE_MUSPELLIUM_ORE = register("blackstone_muspellium_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_MUSPELLIUM_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<BlockItem> BLACKSTONE_COAL_ORE = register("blackstone_coal_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_COAL_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
     public static final RegistryObject<BlockItem> BLACKSTONE_IRON_ORE = register("blackstone_iron_ore", () -> new BlockItem(BlockRegistry.BLACKSTONE_IRON_ORE.get(), new Item.Properties().tab(Yggdrasil.GROUP)));
 
     public static final RegistryObject<ForgeSpawnEggItem> TORCHED_SPAWN_EGG = register("torched_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.TORCHED, 0x101010, 0xD14F0C, new Item.Properties().tab(Yggdrasil.GROUP)));
+    public static final RegistryObject<ForgeSpawnEggItem> FIRE_GIANT_SPAWN_EGG = register("fire_giant_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.FIRE_GIANT, 0x444444, 0xCD4208, new Item.Properties().tab(Yggdrasil.GROUP)));
+
+    public static final RegistryObject<Item> BLANK_RUNE = register("blank_rune", () -> new Item(new Item.Properties().tab(Yggdrasil.GROUP)));
 
     private ItemRegistry() {
     }

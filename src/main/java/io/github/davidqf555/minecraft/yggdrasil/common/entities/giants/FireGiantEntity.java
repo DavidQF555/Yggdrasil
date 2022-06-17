@@ -61,8 +61,8 @@ public class FireGiantEntity extends AbstractGiantEntity {
                         new GenericTrade(Items.SLIME_BALL.getDefaultInstance(), 3, 6, ItemStack.EMPTY, 0, 0, Items.MAGMA_CREAM.getDefaultInstance(), 1, 1, 0, 5, 0, 1, 0)
                 ),
                 new CombinationTrade(
-                        new GenericTrade(Items.STONE.getDefaultInstance(), 10, 20, Items.IRON_INGOT.getDefaultInstance(), 1, 3, ItemRegistry.OVERWORLD_RUNE.get().getDefaultInstance(), 1, 1, 0, 5, 0, 1, 0),
-                        new GenericTrade(Items.STONE.getDefaultInstance(), 10, 20, ItemRegistry.MUSPELLIUM.get().getDefaultInstance(), 1, 3, ItemRegistry.MUSPELHEIM_RUNE.get().getDefaultInstance(), 1, 1, 0, 5, 0, 1, 0)
+                        new GenericTrade(Items.STONE.getDefaultInstance(), 10, 20, Items.IRON_INGOT.getDefaultInstance(), 1, 3, ItemRegistry.MANNAZ_RUNE.get().getDefaultInstance(), 1, 1, 0, 5, 0, 1, 0),
+                        new GenericTrade(Items.STONE.getDefaultInstance(), 10, 20, ItemRegistry.MUSPELLIUM.get().getDefaultInstance(), 1, 3, ItemRegistry.KENAZ_RUNE.get().getDefaultInstance(), 1, 1, 0, 5, 0, 1, 0)
                 )
         };
     }

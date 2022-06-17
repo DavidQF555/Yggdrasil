@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "yggdrasil:item/overworld_rune"
+    "layer0": "yggdrasil:item/mannaz_rune"
   }
 }

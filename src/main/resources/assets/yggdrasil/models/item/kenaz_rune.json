@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "yggdrasil:item/muspelheim_rune"
+    "layer0": "yggdrasil:item/kenaz_rune"
   }
 }
