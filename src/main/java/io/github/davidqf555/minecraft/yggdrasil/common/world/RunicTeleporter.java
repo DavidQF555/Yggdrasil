@@ -14,6 +14,7 @@ import net.minecraft.village.PointOfInterestManager;
 import net.minecraft.village.PointOfInterestType;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.border.WorldBorder;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.util.ITeleporter;
 
@@ -52,13 +53,14 @@ public class RunicTeleporter implements ITeleporter {
     }
 
     private BlockPos createPortal(ServerWorld world, Entity entity, BlockPos center) {
+        BlockPos surface = world.getHeightmapPos(Heightmap.Type.WORLD_SURFACE, center);
         BlockState air = Blocks.AIR.defaultBlockState();
         BlockState def = Blocks.STONE.defaultBlockState();
         int roundWidth = CLEAR_WIDTH / 2;
         for (int y = -1; y < CLEAR_HEIGHT; y++) {
             for (int x = -roundWidth; x <= roundWidth; x++) {
                 for (int z = -roundWidth; z <= roundWidth; z++) {
-                    BlockPos pos = center.offset(x, y, z);
+                    BlockPos pos = surface.offset(x, y, z);
                     BlockState state = world.getBlockState(pos);
                     if (state.canEntityDestroy(world, pos, entity)) {
                         if (y == -1) {
@@ -72,8 +74,8 @@ public class RunicTeleporter implements ITeleporter {
                 }
             }
         }
-        world.setBlockAndUpdate(center, BlockRegistry.RUNIC_TELEPORTER.get().defaultBlockState());
-        return center;
+        world.setBlockAndUpdate(surface, BlockRegistry.RUNIC_TELEPORTER.get().defaultBlockState());
+        return surface;
     }
 
 }

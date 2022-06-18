@@ -1,0 +1,284 @@
+{
+  "parent": "block/block",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        135,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  },
+  "textures": {
+    "particle": "block/stone",
+    "base": "block/stone",
+    "orb": "yggdrasil:block/orb"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        4,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ],
+          "texture": "#base",
+          "cullface": "north"
+        },
+        "east": {
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ],
+          "texture": "#base",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ],
+          "texture": "#base",
+          "cullface": "south"
+        },
+        "west": {
+          "uv": [
+            0,
+            6,
+            16,
+            10
+          ],
+          "texture": "#base",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 180,
+          "texture": "#base"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#base",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        4,
+        4
+      ],
+      "to": [
+        12,
+        9,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            5,
+            12,
+            10
+          ],
+          "texture": "#base"
+        },
+        "east": {
+          "uv": [
+            4,
+            5,
+            12,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#base"
+        },
+        "south": {
+          "uv": [
+            4,
+            5,
+            12,
+            10
+          ],
+          "texture": "#base"
+        },
+        "west": {
+          "uv": [
+            4,
+            5,
+            12,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        2,
+        9,
+        2
+      ],
+      "to": [
+        14,
+        12,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            6,
+            14,
+            9
+          ],
+          "texture": "#base"
+        },
+        "east": {
+          "uv": [
+            2,
+            6,
+            14,
+            9
+          ],
+          "texture": "#base"
+        },
+        "south": {
+          "uv": [
+            2,
+            6,
+            14,
+            9
+          ],
+          "texture": "#base"
+        },
+        "west": {
+          "uv": [
+            2,
+            6,
+            14,
+            9
+          ],
+          "texture": "#base"
+        },
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "rotation": 180,
+          "texture": "#base"
+        },
+        "down": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        12,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "texture": "#orb"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "texture": "#orb"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "texture": "#orb"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "texture": "#orb"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            4,
+            4
+          ],
+          "rotation": 180,
+          "texture": "#orb"
+        }
+      }
+    }
+  ]
+}
