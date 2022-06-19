@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-1.1.0'
+version = '1.16.5-1.2.0'
 group = 'io.github.davidqf555.minecraft.yggdrasil'
 archivesBaseName = 'yggdrasil'
 
@@ -21,6 +21,7 @@ println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getPro
 
 minecraft {
 
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     mappings channel: 'official', version: '1.16.5'
 
     runs {

@@ -2,6 +2,7 @@ package io.github.davidqf555.minecraft.yggdrasil.common;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.*;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.CarverRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.StructureRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.SurfaceBuilderRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -28,6 +29,7 @@ public class Yggdrasil {
     }
 
     private void addRegistries(IEventBus bus) {
+        StructureRegistry.STRUCTURES.register(bus);
         ItemRegistry.ITEMS.register(bus);
         LootModifierRegistry.SERIALIZERS.register(bus);
         BlockRegistry.BLOCKS.register(bus);

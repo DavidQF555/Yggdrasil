@@ -1,6 +1,11 @@
 {
   "structures": {
     "structures": {
+      "yggdrasil:runic_teleporter": {
+        "spacing": 40,
+        "separation": 15,
+        "salt": 219396827
+      }
     }
   },
   "noise": {

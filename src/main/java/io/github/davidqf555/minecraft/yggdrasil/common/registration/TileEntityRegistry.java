@@ -21,8 +21,9 @@ public final class TileEntityRegistry {
 
     private static <T extends TileEntity> RegistryObject<TileEntityType<T>> register(String name, Supplier<TileEntityType<T>> type) {
         return TYPES.register(name, type);
-    }    public static final RegistryObject<TileEntityType<IceEffectTileEntity>> ICE_EFFECT = register("ice_effect", () -> TileEntityType.Builder.of(IceEffectTileEntity::new, BlockRegistry.NIFLIUM_BLOCK.get()).build(null));
+    }
 
+    public static final RegistryObject<TileEntityType<IceEffectTileEntity>> ICE_EFFECT = register("ice_effect", () -> TileEntityType.Builder.of(IceEffectTileEntity::new, BlockRegistry.NIFLIUM_BLOCK.get()).build(null));
 
 
     public static final RegistryObject<TileEntityType<FireEffectTileEntity>> FIRE_EFFECT = register("fire_effect", () -> TileEntityType.Builder.of(FireEffectTileEntity::new, BlockRegistry.MUSPELLIUM_BLOCK.get()).build(null));

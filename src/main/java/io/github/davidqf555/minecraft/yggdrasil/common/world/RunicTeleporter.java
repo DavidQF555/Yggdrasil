@@ -53,6 +53,7 @@ public class RunicTeleporter implements ITeleporter {
     }
 
     private BlockPos createPortal(ServerWorld world, Entity entity, BlockPos center) {
+        world.getChunk(center);
         BlockPos surface = world.getHeightmapPos(Heightmap.Type.WORLD_SURFACE, center);
         BlockState air = Blocks.AIR.defaultBlockState();
         BlockState def = Blocks.STONE.defaultBlockState();

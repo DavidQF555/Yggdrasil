@@ -39,7 +39,9 @@
     ],
     []
   ],
-  "starts": [],
+  "starts": [
+    "yggdrasil:runic_teleporter"
+  ],
   "spawners": {
     "monster": [
       {
