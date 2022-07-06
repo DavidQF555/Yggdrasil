@@ -1,4 +1,4 @@
-package io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen;
+package io.github.davidqf555.minecraft.yggdrasil.registration.worldgen;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;

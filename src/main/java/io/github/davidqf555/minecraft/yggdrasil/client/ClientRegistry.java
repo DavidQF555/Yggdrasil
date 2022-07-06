@@ -4,7 +4,7 @@ import io.github.davidqf555.minecraft.yggdrasil.client.render.CustomArrowRendere
 import io.github.davidqf555.minecraft.yggdrasil.client.render.GiantRenderer;
 import io.github.davidqf555.minecraft.yggdrasil.client.render.TorchedRenderer;
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.EntityRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.EntityRegistry;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

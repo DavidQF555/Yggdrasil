@@ -1,6 +1,6 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.blocks;
 
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.TileEntityRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.TileEntityRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.world.RunicTeleporter;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;

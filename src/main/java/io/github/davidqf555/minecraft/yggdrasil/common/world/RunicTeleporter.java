@@ -1,7 +1,7 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.world;
 
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.BlockRegistry;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.POIRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.BlockRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.POIRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PortalInfo;

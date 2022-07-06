@@ -1,4 +1,4 @@
-package io.github.davidqf555.minecraft.yggdrasil.common.registration;
+package io.github.davidqf555.minecraft.yggdrasil.registration;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.entities.FireArrowEntity;
@@ -7,7 +7,7 @@ import io.github.davidqf555.minecraft.yggdrasil.common.items.CustomArrowItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.WorldPointerItem;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilArmorMaterial;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.YggdrasilItemTier;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.DimensionRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.worldgen.DimensionRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.world.World;

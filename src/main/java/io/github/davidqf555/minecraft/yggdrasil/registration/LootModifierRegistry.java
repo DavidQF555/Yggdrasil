@@ -1,4 +1,4 @@
-package io.github.davidqf555.minecraft.yggdrasil.common.registration;
+package io.github.davidqf555.minecraft.yggdrasil.registration;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
 import io.github.davidqf555.minecraft.yggdrasil.common.items.SmeltLootModifier;

@@ -1,6 +1,6 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.world.structures;
 
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.StructureRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.worldgen.StructureRegistry;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.ResourceLocation;

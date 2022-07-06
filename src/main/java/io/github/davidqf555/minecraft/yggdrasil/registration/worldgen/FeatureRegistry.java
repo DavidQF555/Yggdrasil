@@ -1,7 +1,7 @@
-package io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen;
+package io.github.davidqf555.minecraft.yggdrasil.registration.worldgen;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.BlockRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.BlockRegistry;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;

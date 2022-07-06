@@ -1,6 +1,6 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.blocks;
 
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.TileEntityRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.TileEntityRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;

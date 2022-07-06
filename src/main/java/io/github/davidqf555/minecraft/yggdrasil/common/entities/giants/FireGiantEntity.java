@@ -2,7 +2,7 @@ package io.github.davidqf555.minecraft.yggdrasil.common.entities.giants;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.ItemRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;

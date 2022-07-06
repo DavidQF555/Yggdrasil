@@ -1,7 +1,7 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.items;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
-import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.registration.ItemRegistry;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
