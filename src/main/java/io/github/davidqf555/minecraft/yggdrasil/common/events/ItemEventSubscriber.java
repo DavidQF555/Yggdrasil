@@ -1,8 +1,8 @@
 package io.github.davidqf555.minecraft.yggdrasil.common.events;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
-import io.github.davidqf555.minecraft.yggdrasil.registration.ItemRegistry;
-import io.github.davidqf555.minecraft.yggdrasil.registration.TagRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.ItemRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.TagRegistry;
 import io.github.davidqf555.minecraft.yggdrasil.common.util.EffectHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;

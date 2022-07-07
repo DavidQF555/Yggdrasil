@@ -12,6 +12,7 @@
       }
     },
     "yScale": {
+      "type": "uniform",
       "min_inclusive": 0.1,
       "max_exclusive": 0.9
     },
@@ -29,14 +30,17 @@
       }
     },
     "horizontal_radius_multiplier": {
+      "type": "uniform",
       "min_inclusive": 0.7,
       "max_exclusive": 1.4
     },
     "vertical_radius_multiplier": {
+      "type": "uniform",
       "min_inclusive": 0.8,
       "max_exclusive": 1.3
     },
     "floor_level": {
+      "type": "uniform",
       "min_inclusive": -1,
       "max_exclusive": -0.4
     }
