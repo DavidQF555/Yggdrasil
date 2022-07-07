@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "tag": "stone_crafting_materials"
+    }
+  },
+  "result": {
+    "item": "yggdrasil:blank_rune",
+    "count": 4
+  }
+}

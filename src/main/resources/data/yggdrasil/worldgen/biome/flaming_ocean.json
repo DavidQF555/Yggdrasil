@@ -1,0 +1,50 @@
+{
+  "precipitation": "none",
+  "category": "ocean",
+  "temperature": 5,
+  "downfall": 0,
+  "depth": -1,
+  "scale": 0.1,
+  "effects": {
+    "fog_color": 16725760,
+    "sky_color": 16738816,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": "yggdrasil:muspelheim_cave"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "yggdrasil:muspelheim/magma_ore",
+      "yggdrasil:muspelheim/coal_ore",
+      "yggdrasil:muspelheim/iron_ore",
+      "yggdrasil:muspelheim/muspellium_ore"
+    ],
+    [
+      "yggdrasil:muspelheim/fire",
+      "yggdrasil:muspelheim/lava_pool"
+    ],
+    [],
+    [],
+    []
+  ],
+  "starts": [],
+  "spawners": {
+    "monster": [
+      {
+        "type": "yggdrasil:torched",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ]
+  },
+  "spawn_costs": {
+  }
+}

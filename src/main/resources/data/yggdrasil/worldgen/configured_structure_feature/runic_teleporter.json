@@ -1,0 +1,8 @@
+{
+  "type": "yggdrasil:surface_template",
+  "config": {
+    "template": "yggdrasil:runic_teleporter"
+  },
+  "biomes": "#yggdrasil:has_structure/runic_teleporter",
+  "adapt_noise": false
+}

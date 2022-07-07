@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "iron_ingot"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:mannaz_rune",
+    "count": 8
+  }
+}

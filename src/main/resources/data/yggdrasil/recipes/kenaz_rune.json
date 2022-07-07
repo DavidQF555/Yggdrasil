@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "yggdrasil:muspellium"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    },
+    {
+      "item": "yggdrasil:blank_rune"
+    }
+  ],
+  "result": {
+    "item": "yggdrasil:kenaz_rune",
+    "count": 8
+  }
+}

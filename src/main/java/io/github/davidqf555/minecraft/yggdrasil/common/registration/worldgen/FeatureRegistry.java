@@ -1,6 +1,7 @@
-package io.github.davidqf555.minecraft.yggdrasil.common.registration;
+package io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.Yggdrasil;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.BlockRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.ResourceKey;

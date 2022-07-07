@@ -1,6 +1,9 @@
 package io.github.davidqf555.minecraft.yggdrasil.common;
 
 import io.github.davidqf555.minecraft.yggdrasil.common.registration.*;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.CarverRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.FeatureRegistry;
+import io.github.davidqf555.minecraft.yggdrasil.common.registration.worldgen.StructureRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -26,6 +29,7 @@ public class Yggdrasil {
     }
 
     private void addRegistries(IEventBus bus) {
+        StructureRegistry.STRUCTURES.register(bus);
         ItemRegistry.ITEMS.register(bus);
         LootModifierRegistry.SERIALIZERS.register(bus);
         BlockRegistry.BLOCKS.register(bus);
@@ -33,6 +37,8 @@ public class Yggdrasil {
         FeatureRegistry.CONFIGURED.register(bus);
         FeatureRegistry.PLACED.register(bus);
         TileEntityRegistry.TYPES.register(bus);
+        POIRegistry.TYPES.register(bus);
+        CarverRegistry.CARVERS.register(bus);
     }
 
 }
